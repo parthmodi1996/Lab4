@@ -1,5 +1,5 @@
 .background {
-    -fx-background-color: #008000;
+    -fx-background-image: url("bg_img/bg3.png");
 }
 
 .label {
@@ -24,16 +24,14 @@
 }
 
 .table-view {
-    -fx-base: #008000;
-    -fx-control-inner-background: #008000;
-    -fx-background-color: #008000;
+    -fx-background-image: url("bg_img/table_img.png");
     -fx-table-cell-border-color: transparent;
     -fx-table-header-border-color: transparent;
     -fx-padding: 5;
 }
 
 .table-view .column-header-background {
-    -fx-background-color: #008000;
+    -fx-background-image: url("bg_img/button.png");
 }
 
 .table-view .column-header, .table-view .filler {
@@ -103,25 +101,26 @@
  
  .togglebutton {
     -fx-padding: 5 22 5 22;   
-    -fx-border-color: #e2e2e2;
+    -fx-border-color: #1d1d1d;
     -fx-border-width: 2;
     -fx-background-radius: 0;
     -fx-background-color: #1d1d1d;
+    -fx-background-image: url("bg_img/button.png");
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
-    -fx-text-fill: #d8d8d8;
+    -fx-text-fill: #1d1d1d;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 
 .button {
     -fx-padding: 5 22 5 22;   
-    -fx-border-color: #e2e2e2;
+    -fx-border-color: #1d1d1d;
     -fx-border-width: 2;
     -fx-background-radius: 0;
     -fx-background-color: #1d1d1d;
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
-    -fx-text-fill: #d8d8d8;
+    -fx-text-fill: #1d1d1d;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 

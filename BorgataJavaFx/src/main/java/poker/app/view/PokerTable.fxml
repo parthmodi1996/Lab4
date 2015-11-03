@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="APMainScreen" prefHeight="600.0" prefWidth="889.0" style="-fx-background-color: #008000;" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.app.view.PokerTableController">
+<AnchorPane fx:id="APMainScreen" prefHeight="600.0" prefWidth="889.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.app.view.PokerTableController">
    <children>
       <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="600.0" prefWidth="889.0">
          <bottom>
@@ -27,7 +28,7 @@
                            <children>
                               <TextField fx:id="txtP1Name" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="97.0" />
                               <HBox fx:id="h1P1" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
-                              <ToggleButton fx:id="btnP1SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP1SitLeave" prefHeight="43.0" prefWidth="95.0" styleClass="togglebutton" text="Sit" GridPane.rowIndex="1" />
+                              <ToggleButton fx:id="btnP1SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP1SitLeave" prefHeight="35.0" prefWidth="90.0" styleClass="togglebutton" text="Sit" GridPane.rowIndex="1" />
                               <Label fx:id="lblP1Name" prefHeight="21.0" prefWidth="92.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="15.0" />
@@ -42,9 +43,9 @@
          <center>
             <AnchorPane prefHeight="488.0" prefWidth="889.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER" layoutX="161.0" layoutY="109.0" prefHeight="163.0" prefWidth="333.0" style="-fx-background-color: #008000;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="109.0">
+                  <HBox alignment="CENTER" layoutX="161.0" layoutY="109.0" prefHeight="163.0" prefWidth="333.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="109.0">
                      <children>
-                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="184.0" prefWidth="369.0" style="-fx-background-color: #008000;">
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="184.0" prefWidth="369.0" styleClass="table-view">
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
@@ -53,12 +54,15 @@
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <Button fx:id="btnPlay" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlePlay" text="Play" />
-                                    <Button fx:id="btnDraw" layoutX="89.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDraw" text="Draw" />
+                                    <Button fx:id="btnPlay" layoutX="14.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handlePlay" styleClass="column-header-background" text="Play" />
+                                    <Button fx:id="btnDraw" layoutX="89.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDraw" styleClass="column-header-background" text="Draw" />
                                     <HBox fx:id="HboxCommonArea" layoutX="171.0" layoutY="14.0" prefHeight="55.0" prefWidth="160.0" />
                                  </children>
                               </AnchorPane>
                           </items>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
                         </SplitPane>
                      </children>
                   </HBox>
@@ -82,7 +86,7 @@
                            <children>
                               <TextField fx:id="txtP3Name" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="97.0" GridPane.rowIndex="1" />
                               <HBox fx:id="h2P3" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <ToggleButton fx:id="btnP3SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP3SitLeave" prefHeight="43.0" prefWidth="95.0" styleClass="togglebutton" text="Sit" />
+                              <ToggleButton fx:id="btnP3SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP3SitLeave" prefHeight="35.0" prefWidth="90.0" styleClass="togglebutton" text="Sit" />
                               <Label fx:id="lblP3Name" prefHeight="21.0" prefWidth="92.0" GridPane.columnIndex="1" />
                            </children>
                         </GridPane>
@@ -112,7 +116,7 @@
                                  </GridPane.margin>
                               </TextField>
                               <VBox fx:id="v1P2" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <ToggleButton fx:id="btnP2SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP2SitLeave" prefHeight="43.0" prefWidth="95.0" rotate="90.0" styleClass="togglebutton" text="Sit">
+                              <ToggleButton fx:id="btnP2SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP2SitLeave" prefHeight="35.0" prefWidth="90.0" rotate="90.0" styleClass="togglebutton" text="Sit">
                                  <GridPane.margin>
                                     <Insets left="-20.0" />
                                  </GridPane.margin>
@@ -130,7 +134,7 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="272.0" prefWidth="105.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="50.0">
                      <children>
-                        <GridPane prefHeight="304.0" prefWidth="111.0">
+                        <GridPane prefHeight="304.0" prefWidth="111.0" styleClass="column-header-background">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -146,7 +150,7 @@
                                  </GridPane.margin>
                               </TextField>
                               <VBox fx:id="v2P4" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1" />
-                              <ToggleButton fx:id="btnP4SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP4SitLeave" prefHeight="43.0" prefWidth="95.0" rotate="270.0" styleClass="togglebutton" text="Sit" GridPane.columnIndex="1">
+                              <ToggleButton fx:id="btnP4SitLeave" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleP4SitLeave" prefHeight="35.0" prefWidth="90.0" rotate="270.0" styleClass="togglebutton" text="Sit" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets left="-20.0" />
                                  </GridPane.margin>
